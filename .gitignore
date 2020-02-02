@@ -1,0 +1,6 @@
+*
+*/*
+**/*
+!PKGBUILD
+!pam-unix-others.install
+!.gitignore

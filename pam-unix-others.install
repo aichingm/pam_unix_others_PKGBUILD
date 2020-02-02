@@ -1,0 +1,21 @@
+pre_install() {
+  groupadd --force allow_puo
+  groupadd --force can_puo
+}
+
+post_install() {
+  chgrp can_puo /usr/bin/unix_others_chkpwd
+  chmod +s /usr/bin/unix_others_chkpwd
+  echo lalalalal
+}
+
+post_upgrade() {
+  chgrp can_puo /usr/bin/unix_others_chkpwd
+  chmod +s /usr/bin/unix_others_chkpwd
+  echo lalalalal
+}
+
+post_remove() {
+  groupdel allow_puo
+  groupdel can_puo
+}
